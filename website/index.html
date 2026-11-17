@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="FileScout is a Windows file search app. Describe an image, or filter files by type, date and size, directly in File Explorer.">
+  <meta property="og:title" content="FileScout for Windows">
+  <meta property="og:description" content="Search images by their contents. Filter files by type, date and size. Works in File Explorer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://vikramgt.github.io/Better-Windows-Search/assets/preview.jpg">
+  <title>FileScout for Windows</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="FileScout home">
+      <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg>
+      <span>FileScout</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#setup">Setup</a>
+      <a href="https://github.com/vikramgt/Better-Windows-Search">GitHub <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="intro" aria-labelledby="title">
+      <div>
+        <p class="eyebrow">Windows desktop app <span aria-hidden="true">/</span> Preview build</p>
+        <h1 id="title">FileScout</h1>
+        <p class="lead">Search your files from File Explorer.</p>
+        <p class="intro-copy">Describe an image, or narrow files by type, date and size.</p>
+      </div>
+      <div class="download-area">
+        <a class="download-button" id="download-button" href="https://github.com/vikramgt/Better-Windows-Search/releases/download/v0.1.0/Recall-Windows-0.1.0.zip" download aria-describedby="download-status compatibility">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></svg>
+          <span id="download-label">Download</span>
+        </a>
+        <p id="compatibility" class="compatibility">Windows 10/11 &middot; 64-bit</p>
+        <p id="download-status" class="download-status" role="status">Free for 500 indexed files. All features included.</p>
+        <a class="readme-link" href="assets/README-FIRST.txt">Read the setup instructions <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </section>
+
+    <figure class="demo">
+      <div class="video-frame">
+        <video id="launch-video" autoplay muted playsinline controls preload="metadata" poster="assets/preview.jpg" aria-label="FileScout launch demo: normal search, FileScout image results, and PDF filters">
+          <source src="assets/launch.mp4?v=19234460ed5f" type="video/mp4">
+          Your browser cannot play this video. <a href="assets/launch.mp4?v=19234460ed5f">Open the MP4</a>.
+        </video>
+        <button class="sound-button" id="sound-button" type="button" aria-pressed="false">Enable sound</button>
+        <button class="play-button" id="play-button" type="button" hidden>Play video</button>
+      </div>
+      <figcaption>
+        <span>A look at FileScout in File Explorer. Demo files are illustrative.</span>
+        <a id="video-fallback" href="assets/launch.mp4?v=19234460ed5f" hidden>Open video</a>
+      </figcaption>
+    </figure>
+
+    <section class="examples" aria-label="Search examples">
+      <div><h2>Image content</h2><p><code>people holding trophies</code></p><span>Use a description instead of a filename.</span></div>
+      <div><h2>Dates and file types</h2><p><code>photos downloaded last week</code></p><span>Approximate dates include a small buffer.</span></div>
+      <div><h2>File size</h2><p><code>PDFs last month under 5 MB</code></p><span>Combine filters in the same search.</span></div>
+    </section>
+
+    <section class="setup" id="setup" aria-labelledby="setup-title">
+      <div class="setup-heading">
+        <p class="eyebrow">First run</p>
+        <h2 id="setup-title">Install, then open FileScout once.</h2>
+        <p>Choose search access before using the Explorer shortcut.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Install the app</h3><p>Extract the ZIP and run the setup. Keep Explorer integration selected to enable the shortcut.</p></li>
+        <li><h3>Choose file access</h3><p>Open FileScout and allow automatic search, or choose folders manually. Keep it open for the first indexing pass.</p></li>
+        <li><h3>Open File Explorer</h3><p>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> and enter your search. Your usual <kbd>Ctrl</kbd> + <kbd>F</kbd> is unchanged.</p></li>
+      </ol>
+    </section>
+
+    <aside class="notes" aria-label="Build information">
+      <p>FileScout Pro unlocks unlimited indexed files for &euro;20 one-time. License activation and support links will be available when sales open.</p>
+      <p>Python, dependencies and the image model are included. FileScout processes files on your PC; no account is required.</p>
+      <p>Image matches are approximate. Dates use file creation time as a download-time proxy. This unsigned preview build may show a Windows publisher warning.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a class="footer-brand" href="./">FileScout</a>
+    <details class="credits"><summary>Video credits</summary><p>Music: &ldquo;Happy Beats / Business Moves Vol. 12&rdquo; by <a href="https://ende.app/en">Sascha Ende</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Excerpted and mixed for this demo. Sound effects: <a href="https://kenney.nl/">Kenney</a>, CC0.</p></details>
+    <a href="https://github.com/vikramgt/Better-Windows-Search/issues">Report an issue <span aria-hidden="true">&#8599;</span></a>
+  </footer>
+</body>
+</html>
