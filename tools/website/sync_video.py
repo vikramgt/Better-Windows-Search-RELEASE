@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def main():
-    source = ROOT / 'BRAG' / 'BRAG-FINAL.mp4'
+    source = ROOT / 'BRAG' / 'brag.mp4'
     target = ROOT / 'website' / 'assets' / 'launch.mp4'
     digest = hashlib.sha256(source.read_bytes()).hexdigest()[:12]
     shutil.copy2(source, target)
