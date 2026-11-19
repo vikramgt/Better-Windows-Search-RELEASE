@@ -5,8 +5,6 @@ on:
     branches: [main]
     paths:
       - 'website/**'
-      - 'BRAG/BRAG-FINAL.mp4'
-      - 'tools/website/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -27,8 +25,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Sync final launch video
-        run: python3 tools/website/sync_video.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
